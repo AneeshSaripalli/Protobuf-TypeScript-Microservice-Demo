@@ -17,6 +17,6 @@ cd "%BASE_DIR%"
 
 %PROTOC_DIR%\protoc.exe --proto_path=src/protobufs/proto ^
     --plugin=protoc-gen-ts=%PROCTOC_GEN_TS_PATH% ^
-    --js_out=import_style=commonjs,binary:"%BASE_DIR%/src/protobufs/compiled" ^
-    --ts_out="%BASE_DIR%/src/protobufs/compiled" ^
-    src/protobufs/proto/Test.proto
+    --js_out=import_style=commonjs,binary:"%BASE_DIR%/src/protobufs" ^
+    --ts_out="%BASE_DIR%/src/protobufs" ^
+    src/protobufs/proto/*.proto

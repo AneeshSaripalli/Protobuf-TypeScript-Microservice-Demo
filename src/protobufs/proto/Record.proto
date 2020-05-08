@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+// import "Test.proto";
+
+/*
+    Search record is a wrapper on our Test proto class
+*/
+
+message Record {
+    enum Corpus {
+        INVALID = 0;
+        VALID = 1;
+    }
+    required Corpus valid = 1;
+    
+    repeated int32 arr = 2;
+}
