@@ -1,0 +1,23 @@
+{
+  "name": "ts-protobufs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-windows:protos": "./build/proto-ts-build.bat",
+    "build-linx:protos": "bash ./build.proto-ts-build",
+    "clean:protos": "rm -rf ./protobufs/compiled"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.6",
+    "@types/google-protobuf": "^3.7.2",
+    "express": "^4.17.1",
+    "google-protobuf": "^3.12.0-rc.1"
+  },
+  "devDependencies": {
+    "ts-protoc-gen": "^0.12.0"
+  }
+}
