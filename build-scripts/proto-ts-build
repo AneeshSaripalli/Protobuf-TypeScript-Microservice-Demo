@@ -6,5 +6,6 @@ export PROCTOC_GEN_TS_PATH=./node_modules/.bin/protoc-gen-ts
 
 echo $BASE_DIR
 
-
-$PROTOC_DIR/protoc --plugin="protoc-gen-ts=${PROCTOC_GEN_TS_PATH}" --js_out="import_style=commonjs,binary:${OUT_DIR}" --ts_out=$OUT_DIR $PROTOS/Test.proto
+pushd $PROTOS
+$BASE_DIR/$PROTOC_DIR/protoc --plugin="protoc-gen-ts=${$BASE_DIR/PROCTOC_GEN_TS_PATH}" --js_out="import_style=commonjs,binary:${BASE_DIR}/${OUT_DIR}" --ts_out=$BASE_DIR/$OUT_DIR Test.proto
+popd
